@@ -2,9 +2,11 @@ from django.db import models
 
 
 class Activity(models.Model):
-    activity_objective = models.CharField(max_length=2000)
-    activity_date = models.DateTimeField('date published')
-    activity_owner = models.CharField(max_length=2000)
+    project_title = models.CharField(max_length=200)
+    project_details = models.TextField()
+    start_date = models.DateField()
+    end_date = models.DateField()
+    team_members = models.TextField()
     
     def __str__(self):
         return self.activity_owner
